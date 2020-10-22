@@ -67,6 +67,38 @@
           />
         </div>
         <div class="form-group">
+          <h3 style="color: #ffffff;">Do you have fire alarm?</h3>
+          <select name="fire">
+            <option value=True>Yes</option>
+            <option value=False>No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h3 style="color: #ffffff;">Do you have burglar alarm?</h3>
+          <select name="burglar">
+            <option value=True>Yes</option>
+            <option value=False>No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h3 style="color: #ffffff;">Do you have portable electronics in your house?</h3>
+          <select name="portable">
+            <option value=True>Yes</option>
+            <option value=False>No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h3 style="color: #ffffff;">What's the fire proximity of your house?</h3>
+          <input type="radio" name="fire_prox" value="1" /> 1
+          <input type="radio" name="fire_prox" value="2" /> 2
+          <input type="radio" name="fire_prox" value="3" /> 3
+          <input type="radio" name="fire_prox" value="4" /> 4
+          <input type="radio" name="fire_prox" value="5" /> 5
+          <input type="radio" name="fire_prox" value="6" /> 6
+          <input type="radio" name="fire_prox" value="7" /> 7
+          <input type="radio" name="fire_prox" value="8" checked /> 8
+        </div>
+        <div class="form-group">
           <h3 style="color: #ffffff;">How many policies you own from Lemonade?</h3>
           <input type="radio" name="policies" value="1" /> 1
           <input type="radio" name="policies" value="2" /> 2
@@ -89,6 +121,14 @@
           <input type="radio" name="coast" value="20" /> 20
           <input type="radio" name="coast" value="25" /> 25
           <input type="radio" name="coast" value="30" checked /> 30
+        </div>
+        <div class="form-group">
+          <h3 style="color: #ffffff;">Finally, please select your payment method</h3>
+          <select name="payment">
+            <option value="">Select Payment method</option>
+            <option value="Debit">Debit</option>
+            <option value="Credit">Credit</option>
+          </select>
         </div>
         <input type="submit" value="Submit" class="btn" />
       </form>

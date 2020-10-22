@@ -16,6 +16,11 @@ def submit():
         age = request.form['age']
         coast = request.form['coast']
         form = request.form['form']
+        fire = request.form['fire']
+        fire_prox = request.form['fire_prox']
+        payment = request.form['payment']
+        burglar = request.form['burglar']
+        portable = request.form['portable']
 
         if state == '':
             return render_template('index.html', message='Please enter required fields')
