@@ -10,11 +10,14 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     if request.method == 'POST':
-        customer = request.form['customer']
+        postcode = request.form['postcode']
         state = request.form['state']
         policies = request.form['policies']
+        age = request.form['age']
+        coast = request.form['coast']
+        form = request.form['form']
 
-        if customer == '' or state == '':
+        if state == '':
             return render_template('index.html', message='Please enter required fields')
         else:
             return render_template('index.html', message='Your submission has been processed!')
