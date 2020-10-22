@@ -10,7 +10,7 @@
   <body>
     <h1 style="text-align: center;"><span style="color: #ffffff;">Hey! I'm Maya. I'll get you insured in no time!</span></h1>
     <div class="container">
-      <img src="../static/lemonade.jpg" alt="Lemonade" class="logo" width="1280" height="720"/>
+      <img src="../static/lemonade.jpg" alt="Lemonade" class="logo"/>
       {% if message %}
       <p class="message">{{ message | safe }}</p>
       {% endif %}
@@ -24,7 +24,7 @@
           />
         </div>
         <div class="form-group">
-          <h3>State</h3>
+          <h3 style="color: #ffffff;">State</h3>
           <select name="state">
             <option value="">Select State</option>
             <option value="">AR</option>
@@ -51,7 +51,7 @@
           </select>
         </div>
         <div class="form-group">
-          <h3>How many policies you own from Lemonade?</h3>
+          <h3 style="color: #ffffff;">How many policies you own from Lemonade?</h3>
           <input type="radio" name="policies" value="1" /> 1
           <input type="radio" name="policies" value="2" /> 2
           <input type="radio" name="policies" value="3" /> 3
