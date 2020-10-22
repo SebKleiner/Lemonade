@@ -11,11 +11,10 @@ def index():
 def submit():
     if request.method == 'POST':
         customer = request.form['customer']
-        dealer = request.form['dealer']
-        rating = request.form['rating']
-        comments = request.form['comments']
+        state = request.form['state']
+        policies = request.form['policies']
 
-        if customer == '' or dealer == '':
+        if customer == '' or state == '':
             return render_template('index.html', message='Please enter required fields')
         else:
             return render_template('index.html', message='Your submission has been processed!')

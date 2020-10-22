@@ -5,55 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../static/style.css" />
-    <title>Please rate your service</title>
+    <title>Lemonade Insurance</title>
   </head>
   <body>
+    <h1 style="text-align: center;"><span style="color: #ffffff;">Hey! I'm Maya. I'll get you insured in no time</span></h1>
     <div class="container">
-      <img src="../static/lemonade.jpg" alt="Lemonade" class="logo" />
+      <img src="../static/lemonade.jpg" alt="Lemonade" class="logo" width="640" height="360"/>
       {% if message %}
       <p class="message">{{ message | safe }}</p>
       {% endif %}
       <form action="/submit" method="POST">
         <div class="form-group">
-          <h3>Customer Name</h3>
+          <h3>What's your name?</h3>
           <input
             type="text"
             name="customer"
-            placeholder="Name of vehicle owner"
+            placeholder=""
           />
         </div>
         <div class="form-group">
-          <h3>Dealer</h3>
-          <select name="dealer">
-            <option value="">Select Dealer</option>
-            <option value="Tom Smith">Tom Smith</option>
-            <option value="Karen Swanson">Karen Swanson</option>
-            <option value="Jim Johnson">Jim Johnson</option>
-            <option value="Shauna Gifford">Shauna Gifford</option>
+          <h3>State</h3>
+          <select name="state">
+            <option value="">Select State</option>
+            <option value="">AR</option>
+            <option value="">AZ</option>
+            <option value="">CA</option>
+            <option value="">CT</option>
+            <option value="">DC</option>
+            <option value="">GA</option>
+            <option value="">IA</option>
+            <option value="">IL</option>
+            <option value="">IN</option>
+            <option value="">MD</option>
+            <option value="">MI</option>
+            <option value="">NJ</option>
+            <option value="">NM</option>
+            <option value="">NV</option>
+            <option value="">NY</option>
+            <option value="">OH</option>
+            <option value="">OR</option>
+            <option value="">PA</option>
+            <option value="">RI</option>
+            <option value="">TX</option>
+            <option value="">WI</option>
           </select>
         </div>
         <div class="form-group">
-          <h3>Please rate your dealer</h3>
-          <input type="radio" name="rating" value="1" /> 1
-          <input type="radio" name="rating" value="2" /> 2
-          <input type="radio" name="rating" value="3" /> 3
-          <input type="radio" name="rating" value="4" /> 4
-          <input type="radio" name="rating" value="5" /> 5
-          <input type="radio" name="rating" value="6" /> 6
-          <input type="radio" name="rating" value="7" /> 7
-          <input type="radio" name="rating" value="8" /> 8
-          <input type="radio" name="rating" value="9" /> 9
-          <input type="radio" name="rating" value="10" checked /> 10
-        </div>
-        <div class="form-group">
-          <h3>Comments about your experience</h3>
-          <textarea
-            name="comments"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Tell us what you liked and/or did not like"
-          ></textarea>
+          <h3>How many policies you own from Lemonade?</h3>
+          <input type="radio" name="policies" value="1" /> 1
+          <input type="radio" name="policies" value="2" /> 2
+          <input type="radio" name="policies" value="3" /> 3
+          <input type="radio" name="policies" value="4" /> 4
+          <input type="radio" name="policies" value="5" /> 5
+          <input type="radio" name="policies" value="6" /> 6
+          <input type="radio" name="policies" value="7" checked /> 7
         </div>
         <input type="submit" value="Submit" class="btn" />
       </form>
