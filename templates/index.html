@@ -8,15 +8,15 @@
     <title>Lemonade Insurance</title>
   </head>
   <body>
-    <h1 style="text-align: center;"><span style="color: #ffffff;">Hey! I'm Maya. I'll get you insured in no time</span></h1>
+    <h1 style="text-align: center;"><span style="color: #ffffff;">Hey! I'm Maya. I'll get you insured in no time!</span></h1>
     <div class="container">
-      <img src="../static/lemonade.jpg" alt="Lemonade" class="logo" width="640" height="360"/>
+      <img src="../static/lemonade.jpg" alt="Lemonade" class="logo" width="1280" height="720"/>
       {% if message %}
       <p class="message">{{ message | safe }}</p>
       {% endif %}
       <form action="/submit" method="POST">
         <div class="form-group">
-          <h3>What's your name?</h3>
+          <h3 style="color: #ffffff;">What's your name?</h3>
           <input
             type="text"
             name="customer"
