@@ -29,7 +29,9 @@ def submit():
         burglar = request.form['burglar']
         portable = request.form['portable']
 
-        structure = pickle.load('structure.pkl')
+        with open('structure.pkl', 'rb') as f:
+            structure = pickle.load(f)
+
         sc = load('scaler.joblib')
         model = load_model('oversample_model.h5')
 
