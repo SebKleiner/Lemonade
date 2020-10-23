@@ -2,8 +2,8 @@ from flask import Flask, render_template, request
 from joblib import load
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler
-import sklearn
-import tensorflow
+import pickle
+import pandas as pd
 
 
 app = Flask(__name__)
@@ -29,7 +29,8 @@ def submit():
         burglar = request.form['burglar']
         portable = request.form['portable']
 
-        sc = load("scaler.joblib")
+        structure = pickle.load('structure.pkl')
+        sc = load('scaler.joblib')
         model = load_model('oversample_model.h5')
 
         if state == '' or postcode == '' or policies == '' or age == '' or coast == '' or form == '' or fire == ''\
