@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request
+from joblib import load
+from tensorflow.keras.models import load_model
+
 
 app = Flask(__name__)
 
@@ -23,13 +26,14 @@ def submit():
         burglar = request.form['burglar']
         portable = request.form['portable']
 
-        final = postcode + state + policies + age + coast + form + fire + fire_prox + payment + burglar + portable
+        sc = load("scaler.joblib")
+        model = load_model('oversample_model.h5')
 
         if state == '' or postcode == '' or policies == '' or age == '' or coast == '' or form == '' or fire == ''\
                 or fire_prox == '' or payment == '' or burglar == '' or portable == '':
             return render_template('index.html', message='Please enter required fields')
         else:
-            return render_template('index.html', message='Your submission has been processed!' + final)
+            return render_template('index.html', message='Your submission has been processed!')
 
 
 if __name__ == '__main__':
