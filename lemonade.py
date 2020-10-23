@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -22,10 +23,13 @@ def submit():
         burglar = request.form['burglar']
         portable = request.form['portable']
 
-        if state == '':
+        final = postcode + state + policies + age + coast + form + fire + fire_prox + payment + burglar + portable
+
+        if state == '' or postcode == '' or policies == '' or age == '' or coast == '' or form == '' or fire == ''\
+                or fire_prox == '' or payment == '' or burglar == '' or portable == '':
             return render_template('index.html', message='Please enter required fields')
         else:
-            return render_template('index.html', message='Your submission has been processed!')
+            return render_template('index.html', message='Your submission has been processed!' + final)
 
 
 if __name__ == '__main__':
