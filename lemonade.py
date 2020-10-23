@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from joblib import load
 from tensorflow.keras.models import load_model
+from sklearn.preprocessing import StandardScaler
 
 
 app = Flask(__name__)
