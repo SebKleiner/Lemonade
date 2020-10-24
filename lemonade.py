@@ -50,9 +50,18 @@ def submit():
             return render_template('index.html', message='Please enter required fields')
         else:
             final.append(int(postcode))
-            final.append(fire)
-            final.append(burglar)
-            final.append(portable)
+            if fire == 'True':
+                final.append(1)
+            else:
+                final.append(0)
+            if burglar == 'True':
+                final.append(1)
+            else:
+                final.append(0)
+            if portable == 'True':
+                final.append(1)
+            else:
+                final.append(0)
             final.append(int(age))
             final.append(int(policies))
 
